@@ -1,17 +1,22 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final themeProvider = ChangeNotifierProvider((ref) => ThemeNotifier());
 
 class ThemeNotifier extends ChangeNotifier {
+  ThemeData _themeData = ThemeData.light();
 
-  bool isDarkMode = false;
-
-  void updateTheme(bool isDarkMode) {
-    this.isDarkMode = isDarkMode;
+  ThemeData get themeData => _themeData;
+  
+  void toggleDark() {
+    _themeData = ThemeData.dark();
     notifyListeners();
+  }
 
-    
+  void toggleLight() {
+    _themeData = ThemeData.light();
+    notifyListeners();
   }
 }
