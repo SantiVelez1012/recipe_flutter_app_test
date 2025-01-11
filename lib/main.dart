@@ -16,8 +16,7 @@ class RecipeApp extends ConsumerWidget {
     final themeData = ref.watch(themeProvider).themeData;
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: themeData,  
-      title: 'Recipes',
+      theme: themeData,
       routerConfig: appRouter,
     );
   }
