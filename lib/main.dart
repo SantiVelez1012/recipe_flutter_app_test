@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:recipe_flutter_app_test/providers/theme_provider.dart';
-import 'package:recipe_flutter_app_test/router/app_router.dart';
+import 'package:recipe_flutter_app_test/common/domain/providers/theme_provider.dart';
+import 'package:recipe_flutter_app_test/common/domain/router/app_router.dart';
 
 void main() {
   runApp(ProviderScope(child: RecipeApp()));
