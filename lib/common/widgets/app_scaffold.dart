@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:recipe_flutter_app_test/common/utils/text_constants.dart';
 
-import '../providers/theme_provider.dart';
+import '../presentation/providers/theme_provider.dart';
 
 class AppScaffold extends StatelessWidget {
   final Widget child;
@@ -32,7 +33,7 @@ class _GlobalAppBar extends ConsumerWidget implements PreferredSizeWidget {
     final isDarkTheme = ref.watch(themeProvider).themeData.brightness == Brightness.dark;
 
     return AppBar(
-      title: Text('Global AppBar'),
+      title: Text(TextConstants.globalTitle),
       actions: [
         IconButton(
           icon: Icon(isDarkTheme ? Icons.dark_mode : Icons.light_mode),
