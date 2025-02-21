@@ -5,6 +5,21 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ListView(
+      children: [
+
+        const SizedBox(height: 20),
+        const Text('Login Screen'),
+        const SizedBox(height: 20),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/');
+          },
+          child: const Text('Go to Home'),
+        ),
+
+
+      ],
+    );
   }
 }
