@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipe_flutter_app_test/common/utils/text_constants.dart';
 
-import '../domain/providers/theme_provider.dart';
+import '../presentation/providers/theme_provider.dart';
 
 class AppScaffold extends StatelessWidget {
   final Widget child;
